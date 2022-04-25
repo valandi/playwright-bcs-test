@@ -39,7 +39,8 @@ test.describe('Demo App - Ultrafast', () => {
     // });
     
     let count = 0;
-    await eyes.checkWindow('window');
+    console.log(`Before BCS hook ${count}`);
+    
     await eyes.check(
       'js-fullpage', 
       Target.region('body')
@@ -50,7 +51,7 @@ test.describe('Demo App - Ultrafast', () => {
               count = 20;
             })
     );
-    console.log(count);
+    console.log(`After BCS hook ${count}`);
     await eyes.close(false);
   });
 
