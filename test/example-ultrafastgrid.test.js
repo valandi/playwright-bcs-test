@@ -38,7 +38,7 @@ test.describe('Demo App - Ultrafast', () => {
     //   }
     // });
     
-    
+    let count = 0;
     await eyes.checkWindow('window');
     await eyes.check(
       'js-fullpage', 
